@@ -54,20 +54,18 @@ public class LoginSteps {
     }
 
     @Then("I should be logged in to Admin Page")
-    public void iShouldBeLoggedInToAdminPage() throws InterruptedException {
+    public void iShouldBeLoggedInToAdminPage()  {
 
         System.out.println("I should be logged into admin page");
         Assert.assertEquals(adminPage.getAdminPageMessageText(),"Accounts", "You are now logged in to Admin Page");
-        Thread.sleep(3000);
         Base.closeBrowser();
 
     }
 
     @Then("I get username field required message")
-    public void iGetUsernameFieldRequiredMessage() throws InterruptedException {
+    public void iGetUsernameFieldRequiredMessage()  {
         System.out.println("Username field is required message");
         Assert.assertEquals(loginPage.getFieldRequiredText(),"This field is required", "Password required message");
-        Thread.sleep(3000);
         Base.closeBrowser();
     }
 
@@ -78,10 +76,9 @@ public class LoginSteps {
     }
 
     @Then("I get password field required message")
-    public void iGetPasswordFieldRequiredMessage() throws InterruptedException {
+    public void iGetPasswordFieldRequiredMessage()  {
         System.out.println("Password field is required message");
         Assert.assertEquals(loginPage.getFieldRequiredText(),"This field is required", "Password required message");
-        Thread.sleep(3000);
         Base.closeBrowser();
     }
 
@@ -93,10 +90,9 @@ public class LoginSteps {
     }
 
     @Then("I get username or password is incorrect message")
-    public void iGetUsernameOrPasswordIsIncorrectMessage() throws InterruptedException {
+    public void iGetUsernameOrPasswordIsIncorrectMessage() {
         System.out.println("username or password is incorrect message");
         Assert.assertEquals(loginPage.getIncorrectSignInText(),"Multiple incorrect sign-ins could result in your access being locked. If this does happen, you'll receive an email explaining how to reset your access.", "Multiple sign i error");
-        Thread.sleep(3000);
         Base.closeBrowser();
     }
 
